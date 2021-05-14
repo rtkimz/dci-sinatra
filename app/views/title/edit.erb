@@ -1,0 +1,27 @@
+<% sel = " selected" %>
+<h2><%= @title.name %></h2>
+
+<h3>Edit Comic Info</h3>
+<form method="post" action="/title/<%= @title.id %>"> 
+    <input type="hidden" name="_method" value="patch">
+    <p><label>Publisher: </label>
+        <select name="publisher_id">
+        <% @publishers.each do |pub| %>
+            <option value="<%= pub.id %>" 
+                <%= " selected" if @title.publisher_id == pub.id %>><%= pub.name %>
+            </option>
+        <% end %>
+        </select>
+    </p>
+    <p><label>Character: </label>
+        <select name="character_id">
+        <% @characters.each do |character| %>
+            <option value="<%= character.id %>"
+                <%= " selected" if @title.character_id == character.id %>><%= character.name %>
+            </option>
+        <% end %>
+        </select>
+    </p>
+    
+    <button type="submit">Update Comic Info</button>
+</form>

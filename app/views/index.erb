@@ -1,0 +1,6 @@
+<!-- views/index.erb -->
+<div class="flex">
+  <% @publishers.each do |pub| %>
+    <div><a href="publisher/<%= pub.id %>"><img src="assets/publishers/<%= pub.name %>.png" width="150 px" /></a></div>
+  <% end %>
+</div>

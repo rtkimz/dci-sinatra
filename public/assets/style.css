@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Komika Hand";
+  src: url("/assets/komika.hand.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Slapstick";
+  src: url("/assets/sf-slapstick-comic-shaded.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cartoonist Hand";
+  src: url("/assets/cartoonist_hand_bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Qarmic Sans";
+  src: url("/assets/qarmic_sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Veggie";
+  src: url("/assets/veggie_med.woff") format("woff");
+}
+
+body {
+  background-image: url("/assets/SL-090119-22970-03.jpg");
+  background-size: contain;
+}
+
+header {
+  text-align: center;
+  font-family: "Komika Hand";
+  font-size: 1.5em;
+  grid-area: head;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  font-family: "Komika Hand";
+  font-size: 0.4em;
+  text-align: center;
+  grid-area: foot;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Cartoonist Hand";
+}
+
+tr {
+  font-family: "Veggie";
+  font-size: 1.5em;
+  padding: 3px;
+}
+
+td .title {
+  text-align: left;
+}
+
+#site {
+  display: grid;
+  width: 80%;
+  grid-template: [header-left] "head head" 40px [header-right]
+                 [main-left]   "main main" 1fr  [main-right]
+                 [footer-left] "foot foot" 30px [footer-right]
+                 / 120px 1fr;
+  grid-gap: 5px;
+}
+
+.item_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pub_grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(15, 1fr);
+  row-gap: 10px;
+  font-family: "Slapstick";
+  font-size: 1.5em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.pub_grid a {
+  text-decoration: none;
+}
+
+.comics {
+  text-align: center;
+}

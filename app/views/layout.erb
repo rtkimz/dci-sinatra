@@ -1,0 +1,22 @@
+<!-- views/layout.erb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type=text/css href="/assets/style.css">
+	<link rel="icon" type="image/png" href="/assets/favicon.png">
+	<title>Comix</title>
+</head>
+<body>
+	<section id="site">
+		<header><a href="/">Digital Comic Interface</a></header>
+		<main>
+			<%= yield %>
+		</main>
+		<footer>Digital Comic Interface. <br />
+			<a href='https://www.freepik.com/vectors/background'>Background vector created by starline - www.freepik.com</a><br />
+			favicon courtesy of <a href="http://icons8.com/">http://icons8.com/</a>
+		</footer>
+	</section>
+</body>
+</html>

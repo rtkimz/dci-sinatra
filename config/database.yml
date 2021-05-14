@@ -1,0 +1,9 @@
+# had to add this file in this directory to get the "rake db:create" command to work
+
+sqlite: &sqlite
+  host: 127.0.0.1
+  adapter: sqlite3
+
+development:
+  <<: *sqlite
+  database: db/comix_db.sqlite3

@@ -1,0 +1,10 @@
+<!-- views/title/index.erb -->
+<script> function notready() { alert("This is only a placeholder.\nThe ability to view a .cbr file's contents will be added at a later time.") } </script>
+<table class="item_center">
+<% @comics.each do |comic| %>
+  <tr>
+    <td><a href="#" onclick=notready()><img src="/assets/book.png" height="20px" /></a></td>
+    <td><a href="/<%= comic.full_path %>"><%= comic.title.name %> #<%= comic.issue_number %></a></td>
+  </tr>
+<% end %>
+</table>
