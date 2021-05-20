@@ -32,14 +32,16 @@ After copying the files for the application to your system, you create the datab
 * Install all gems for this project (bundle install)
 * Mount where your comics are located (sudo mount /dev/sda1 /srv/dci-sinatra/public/comics/)
   * If you reboot your server, you will likely need to mount this again
-** Each of the following commands should be run from inside the dci-sinatra directory **
+
+**Each of the following commands should be run from inside the dci-sinatra directory**
 * Create the database (rake db:create)
 * Run migrations on the database (rake db:migrate)
 * Scrape the contents of your comics into the database (ruby scrape.rb)
   * depending on how many files you have, this may take a while (like, a minute per couple hundred)
 * Start the server (bundle exec rackup -p 4567 -o 0.0.0.0)
   * the "-o 0.0.0.0" option is used to bind to any port so that computers on the same LAN can access the server (ie http://192.168.1.15:4567 )
-** AGAIN, THIS SOFTWARE IS DESIGNED TO ONLY RUN ON A LAN, NOT AN INTERNET ACCESSIBLE SERVER!
+  
+**AGAIN, THIS SOFTWARE IS DESIGNED TO ONLY RUN ON A LAN, NOT AN INTERNET ACCESSIBLE SERVER!**
 
 ## TO-DO
 
