@@ -11,10 +11,34 @@ After copying the files for the application to your system, you create the datab
 * [Ruby](https://www.ruby-lang.org)
 * [Sinatra](http://sinatrarb.com/)
 * ActiveRecord
+* [SQLite3](https://sqlite.org/index.html)
 
 ## Requirements
 
+* [Git](https://git-scm.com/)
+* [RBEnv](https://github.com/rbenv/rbenv)
+* [Ruby](https://www.ruby-lang.org)
+* [SQLite3](https://sqlite.org/index.html)
 
+## Installation and setup (typical commands on a Debian based system)
+
+* Install Git (sudo apt install git)
+* Install RBEnv (sudo apt install rbenv, rbenv init)
+  * this will make working with Ruby gems easier later
+* Install Ruby (rbenv install 3.0.0)
+  * Set the local version of Ruby to 3.0.0 (rbenv local 3.0.0)
+* Install SQLite3 (sudo apt install sqlite3)
+* Install Bundler (gem install bundler)
+* Install all gems for this project (bundle install)
+* Mount where your comics are located (sudo mount /dev/sda1 /srv/dci-sinatra/public/comics/)
+  * If you reboot your server, you will likely need to mount this again
+** Each of the following commands should be run from inside the dci-sinatra directory **
+* Create the database (rake db:create)
+* Run migrations on the database (rake db:migrate)
+* Scrape the contents of your comics into the database (ruby scrape.rb)
+  * depending on how many files you have, this may take a while (like, a minute per couple hundred)
+* Start the server (bundle exec rackup -p 4567 -o 0.0.0.0)
+  * the "-o 0.0.0.0" option is used to bind to any port so that computers on the same LAN can access the server (ie http://192.168.1.15:4567 )
 
 ## Author
 
