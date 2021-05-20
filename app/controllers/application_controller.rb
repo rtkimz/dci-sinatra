@@ -3,6 +3,7 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    set :bind, '0.0.0.0'
   end
 
   get '/' do
@@ -25,7 +26,7 @@ class ApplicationController < Sinatra::Base
 
   get '/character/:id' do
     @name = Character.find(params[:id]).name
-    @titles = Title.joins(:publisher, :character).where(character_id: params[:id])
+    @titles = Title.joins(:publisher, :character).where(character_id: params[:id]).order(:name)
     erb :'character/index'
   end  
 
