@@ -1,2 +1,3 @@
 db/comix_db.sqlite3
 public/comics
+Gemfile.lock
