@@ -39,7 +39,7 @@ After copying the files for the application to your system, you create the datab
   * depending on how many files you have, this may take a while (like, a minute per couple hundred)
 * Start the server (bundle exec rackup -p 4567 -o 0.0.0.0)
   * the "-o 0.0.0.0" option is used to bind to any port so that computers on the same LAN can access the server (ie http://192.168.1.15:4567 )
-** AGAIN, THIS SOFTWARE IS DESIGNED TO ONLY RUN ON A LAN, NOT INTERNET ACCESSIBLE!
+** AGAIN, THIS SOFTWARE IS DESIGNED TO ONLY RUN ON A LAN, NOT AN INTERNET ACCESSIBLE SERVER!
 
 ## TO-DO
 
